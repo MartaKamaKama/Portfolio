@@ -19,8 +19,8 @@
 
     /* Hero */
     .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; overflow: hidden; }
-    .scene { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 38% 20%; background: #2b2266; }
-    .hero::before { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(to bottom, rgba(120,80,190,.35), rgba(60,40,140,.2) 45%, transparent 70%); mix-blend-mode: multiply; }
+    .scene { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 40%; background: #2b2266; }
+    .hero::before { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(to bottom, rgba(120,80,190,.15), transparent 60%); mix-blend-mode: multiply; }
     .hero::after { content: ""; position: absolute; inset: 0;
       background: linear-gradient(to bottom, rgba(28,23,72,.25) 0%, rgba(28,23,72,0) 25%, rgba(35,29,92,.55) 58%, rgba(28,23,72,.96) 88%, var(--navy) 100%); }
     .hero > .wrap { position: relative; z-index: 1; width: 100%; }
@@ -78,7 +78,7 @@
 </head>
 <body>
   <header class="hero" id="home">
-    <img class="scene" src="hero.jpg" alt="Budapest Parliament and Chain Bridge on the Danube at sunset">
+    <img class="scene" src="hero.jpg" alt="Lisbon rooftops and the 25 de Abril Bridge at sunset">
     <div class="wrap">
       <nav>
         <a class="logo" href="#home" aria-label="Marta, home">
@@ -141,7 +141,7 @@
         <a class="btn" href="mailto:marta.kamer@wp.pl">Contact me</a>
       </div>
     </section>
-    <footer>© 2026 Marta · Photo: <a href="https://unsplash.com/photos/parliament-building-and-chain-bridge-in-budapest-at-sunset-s8khmvGXWo0">Himmel S / Unsplash</a></footer>
+    <footer>© 2026 Marta</footer>
   </main>
 </body>
 </html>
