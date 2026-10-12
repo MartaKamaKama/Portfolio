@@ -1,3 +1,3 @@
 # Portfolio
 
-Strona: https://martakamakama.github.io/Portfolio/
+Site: https://martakamakama.github.io/Portfolio/
