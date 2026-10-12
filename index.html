@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marta · Portfolio</title>
+  <meta name="description" content="Strona osobista Marty: projekty, dashboardy i kontakt.">
+  <style>
+    :root {
+      --bg: #f7f7f5; --card: #ffffff; --text: #1d1d1f; --muted: #5f6368;
+      --accent: #6c4cf1; --border: #e4e4e0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #121214; --card: #1c1c20; --text: #f2f2f3; --muted: #a0a0a8; --accent: #9b85ff; --border: #2c2c32; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+           background: var(--bg); color: var(--text); line-height: 1.6; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 56px 16px; }
+    header h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 8px; }
+    header p { color: var(--muted); font-size: 1.15rem; margin: 0; }
+    .links { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .links a { color: var(--accent); text-decoration: none; border: 1px solid var(--border);
+               padding: 8px 14px; border-radius: 999px; background: var(--card); }
+    .links a:hover { border-color: var(--accent); }
+    h2 { margin-top: 56px; font-size: 1.4rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+    .card h3 { margin: 0 0 6px; font-size: 1.1rem; }
+    .card p { margin: 0 0 12px; color: var(--muted); }
+    .card a { color: var(--accent); }
+    footer { margin-top: 64px; color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Cześć, jestem Marta 👋</h1>
+      <p>Analizuję dane, buduję dashboardy i ćwiczę SQL. Tu zbieram swoje projekty.</p>
+      <div class="links">
+        <a href="https://github.com/MartaKamaKama">GitHub</a>
+        <a href="#projekty">Projekty</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </header>
+
+    <h2>O mnie</h2>
+    <p>Krótki opis: czym się zajmujesz, jakie narzędzia znasz (np. SQL, Power BI, Python) i czego szukasz.</p>
+
+    <h2 id="projekty">Projekty</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Dashboards</h3>
+        <p>Zbiór moich dashboardów i analiz danych.</p>
+        <a href="https://github.com/MartaKamaKama/Dashboards">Zobacz repozytorium →</a>
+      </div>
+      <div class="card">
+        <h3>Projekt 2</h3>
+        <p>Opis kolejnego projektu.</p>
+        <a href="#">Link →</a>
+      </div>
+    </div>
+
+    <h2 id="kontakt">Kontakt</h2>
+    <p>Napisz do mnie przez <a href="https://github.com/MartaKamaKama" style="color:var(--accent)">GitHub</a> lub dodaj tu e-mail / LinkedIn.</p>
+
+    <footer>© 2026 Marta</footer>
+  </div>
+</body>
+</html>
