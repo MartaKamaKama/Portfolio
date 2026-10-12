@@ -9,20 +9,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@700;800&family=Fira+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root { --navy: #1c1748; --deep: #231d5c; --violet: #8f7cff; --pink: #e7a7b8; --text: #f3f0ff; --muted: #c4bde6; --line: rgba(255,255,255,.14); }
+    :root { --navy: #1c1748; --deep: #231d5c; --violet: #8f7cff; --pink: #f6b8d4; --blush: #ffd6e8; --text: #f3f0ff; --muted: #c4bde6; --line: rgba(255,255,255,.14); }
     * { box-sizing: border-box; }
+    body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background: radial-gradient(420px 90% at 0% 50%, rgba(255,170,215,.30), transparent 70%),
+                  radial-gradient(420px 90% at 100% 50%, rgba(255,170,215,.30), transparent 70%); }
     html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--navy); color: var(--text); font-family: "Fira Sans", system-ui, sans-serif; line-height: 1.6; }
+    body { margin: 0; background:
+      radial-gradient(900px 600px at 100% 30%, rgba(246,150,200,.28), transparent 65%),
+      radial-gradient(800px 600px at 0% 65%, rgba(200,130,230,.22), transparent 65%),
+      radial-gradient(1100px 700px at 60% 100%, rgba(255,170,210,.40), transparent 70%),
+      linear-gradient(180deg, #1c1748 0%, #2a1f66 35%, #4a2a7e 70%, #7a3f8f 100%); color: var(--text); font-family: "Fira Sans", system-ui, sans-serif; line-height: 1.6; }
     h1, h2, h3, .stat b, .logo b { font-family: "Fira Sans Extra Condensed", "Fira Sans", sans-serif; text-transform: uppercase; letter-spacing: .01em; }
     a { color: inherit; }
     .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
 
     /* Hero */
     .hero { position: relative; display: flex; flex-direction: column; overflow: hidden; }
-    .scene { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 55%; background: #2b2266; }
+    .scene { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 55%; -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); }
     .hero::before { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(to bottom, rgba(120,80,190,.15), transparent 60%); mix-blend-mode: multiply; }
     .hero::after { content: ""; position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(28,23,72,.25) 0%, rgba(28,23,72,0) 25%, rgba(35,29,92,.55) 58%, rgba(28,23,72,.96) 88%, var(--navy) 100%); }
+      background: linear-gradient(to bottom, rgba(28,23,72,.25) 0%, rgba(28,23,72,0) 25%, rgba(35,29,92,.55) 58%, rgba(28,23,72,.75) 85%, rgba(28,23,72,0) 100%); }
     .hero > .wrap { position: relative; z-index: 1; width: 100%; }
     nav { display: flex; justify-content: space-between; align-items: center; padding-top: 36px; gap: 24px; flex-wrap: wrap; }
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
@@ -49,9 +56,9 @@
     section { padding: 96px 0 0; }
     .eyebrow { color: var(--pink); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; margin: 0 0 10px; }
     h2 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1; margin: 0; }
-    h2 + .bar { width: 90px; height: 4px; margin: 22px 0 36px; }
+    h2 + .bar { width: 90px; height: 4px; margin: 22px 0 36px; background: linear-gradient(90deg, #fff, var(--pink)); }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
-    .card { padding: 30px 28px; border: 1px solid var(--line); background: linear-gradient(160deg, rgba(143,124,255,.14), rgba(231,167,184,.05)); border-radius: 4px; transition: transform .2s, border-color .2s; }
+    .card { padding: 30px 28px; border: 1px solid rgba(255,214,232,.22); background: linear-gradient(160deg, rgba(143,124,255,.16), rgba(246,184,212,.14)); box-shadow: 0 10px 40px rgba(246,150,200,.12); border-radius: 4px; transition: transform .2s, border-color .2s; }
     .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.35); }
     .card .num { font-family: "Fira Sans Extra Condensed", sans-serif; font-weight: 800; font-size: 1rem; color: var(--pink); letter-spacing: .1em; }
     .card h3 { font-size: 1.7rem; line-height: 1.05; margin: 8px 0 12px; }
@@ -68,10 +75,10 @@
     @media (max-width: 560px) { .exp li { grid-template-columns: 1fr; } .menu { gap: 18px; } .stat { border-right: 0; border-bottom: 1px solid var(--line); } }
 
     .contact { margin-top: 110px; padding: 80px 0 90px; text-align: center;
-      background: radial-gradient(700px 300px at 50% 0%, rgba(231,167,184,.25), transparent 70%), var(--deep); }
+      background: radial-gradient(800px 360px at 50% 100%, rgba(255,200,225,.55), transparent 75%), linear-gradient(180deg, rgba(74,42,126,.0), rgba(170,90,170,.35)); }
     .contact h2 { margin-bottom: 18px; }
     .contact p { color: var(--muted); margin: 0 auto 30px; max-width: 520px; }
-    .btn { display: inline-block; padding: 14px 30px; background: #fff; color: var(--navy); text-decoration: none; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .85rem; transition: transform .15s; }
+    .btn { display: inline-block; padding: 14px 30px; background: #fff; box-shadow: 0 8px 30px rgba(255,170,210,.45); color: var(--navy); text-decoration: none; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .85rem; transition: transform .15s; }
     .btn:hover { transform: translateY(-2px); }
     footer { padding: 28px 0; text-align: center; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); }
   </style>
