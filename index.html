@@ -16,13 +16,15 @@
     * { box-sizing: border-box; }
     body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
            background: var(--bg); color: var(--text); line-height: 1.6; }
-    .wrap { max-width: 860px; margin: 0 auto; padding: 56px 16px; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px 56px; }
+    .hero { background: linear-gradient(135deg, #1b2a4e 0%, #2d2f7a 55%, #5b3fa8 100%); color: #fff; }
+    .hero .wrap { padding-top: 72px; padding-bottom: 72px; }
     header h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 8px; }
-    header p { color: var(--muted); font-size: 1.15rem; margin: 0; }
-    .links { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
-    .links a { color: var(--accent); text-decoration: none; border: 1px solid var(--border);
-               padding: 8px 14px; border-radius: 999px; background: var(--card); }
-    .links a:hover { border-color: var(--accent); }
+    header p { color: rgba(255,255,255,.82); font-size: 1.15rem; margin: 0; }
+    .links { margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .links a { color: #fff; text-decoration: none; border: 1px solid rgba(255,255,255,.35);
+               padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,.08); }
+    .links a:hover { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.7); }
     h2 { margin-top: 56px; font-size: 1.4rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
     .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
@@ -33,8 +35,8 @@
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
+  <header class="hero">
+    <div class="wrap">
       <h1>Hi, I'm Marta 👋</h1>
       <p>Data Analyst · Business Intelligence. I turn data from many systems into clear metrics and reports.</p>
       <div class="links">
@@ -42,7 +44,9 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
-    </header>
+    </div>
+  </header>
+  <div class="wrap">
 
     <h2>About me</h2>
     <p>I've been working with data since 2018, mostly for large international companies. I started out in SAP BW data warehousing, and today, as a data analyst, I combine SQL, Tableau and conversations with the business into reports that people actually base decisions on.</p>
